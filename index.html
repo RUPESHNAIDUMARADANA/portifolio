@@ -2,443 +2,314 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="RUPESH NAIDU MARADANA,RUPESH, portfolio,Machine Learning , personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
-    <meta name="description" content="Welcome to RUPESH's Portfolio. Cloud Computing Enthusiast"/>
-    <link rel="stylesheet" href="./assets/css/style.css">    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
-    <title>RUPESH's Portfolio</title>
+    <title>Rupesh Naidu - Frontend Developer & UI/UX Learner</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and font */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for navigation */
+            background-color: #1a202c; /* Dark background */
+            color: #e2e8f0; /* Light text color */
+        }
+
+        /* Hero section animations */
+        .hero-text-animate {
+            animation: fadeInSlideUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .hero-button-animate {
+            animation: fadeIn 1.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        /* Keyframes for hero animations */
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Skills card animation on scroll */
+        .skill-card {
+            opacity: 0;
+            transform: translateY(50px) scale(0.9);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .skill-card.animate-in {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Skills card hover effect */
+        .skill-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Project card hover effect */
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Smooth scroll for navigation links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
+<body class="bg-gray-900 text-gray-100">
 
-
-
-<!-- Google tag (gtag.js) Starts -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JNBQXGQJJF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNBQXGQJJF');
-</script>
-</head>
-<body oncontextmenu="return false">
-<!-- Google tag (gtag.js) Ends -->
-
-
-
-<!-- navbar starts -->f
-<header>
-  <a href="/" class="logo"><i class="fas fa-cog fa-pulse"></i> RUPESH</a>
-        <div id="menu" class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#blogs">Articles & Blogs</a></li>
-            <li><a href="#skills">Skills</a></li>
+    <!-- Header / Navigation -->
+    <header class="bg-gray-800 p-4 shadow-lg fixed w-full z-10">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-400">Rupesh Naidu</a>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="text-gray-300 hover:text-indigo-400 transition duration-300">Home</a></li>
+                <li><a href="#about" class="text-gray-300 hover:text-indigo-400 transition duration-300">About</a></li>
+                <li><a href="#projects" class="text-gray-300 hover:text-indigo-400 transition duration-300">Projects</a></li>
+                <li><a href="#skills" class="text-gray-300 hover:text-indigo-400 transition duration-300">Skills</a></li>
+                <li><a href="#contact" class="text-gray-300 hover:text-indigo-400 transition duration-300">Contact</a></li>
             </ul>
         </nav>
-</header>
+    </header>
 
-
-<br><br>
-<!-- legend section starts -->
-<section class="home" id="home">
-    <div id="particles-js"></div>
-    <div class="content">
-    <h2>Hi There,<br/> I'm<span> RUPESH NAIDU MARADANA</span></h2>
-    <p>i am into <span class="typing-text"></span></p>
-    <a href="#about" class="btn"><span>About Me</span>
-      <i class="fas fa-arrow-circle-down"></i>
-    </a>
-    <div class="socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://linkedin.com/in/rupesh-naidu-maradana-60576521a/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
-          <li><a class="github" aria-label="GitHub" href= "https://github.com/RUPESHNAIDUMARADANA/" target="_blank"><i class="fab fa-github"></i></a></li>
-          <!-- <li><a class="dev" aria-label="Medium" href="https://medium.com/@venkatesh5082931" target="_blank"><i class="fab fa-medium-m"></i></a></li>
-          <li><a class="dev" aria-label="Kaggle" href="https://www.kaggle.com/pvsk2211" target="_blank"><i class="fab fa-kaggle"></i></a></li>
-          <li><a class="dev" aria-label="Kaggle" href="https://www.upwork.com/" target="_blank"><i class="fas fa-briefcase"></i></a></li>
-      -->  </ul>
-      </div>
-    </div>
-<div class="image">
-    <img draggable="false" class="tilt" src="./assets/images/hero.jpg" alt="RUPESH's PHOTO">
-</div>
-</section>
-<!-- legend section ends -->
-
-
-
-<!-- about section starts -->
-<section class="about" id="about">
-    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
-    <div class="row">
-    <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/profile2.jpg" alt="">
-    </div>
-    <div class="content"><br><br><br>
-        <h3>I'm <span>RUPESH NAIDU MARADANA</span></h3>
-        <span class="tag">Cloud Computing Enthusiast</span>
-        <p><br>I am a 4th-year undergraduate Student at Amrita Vishwa Vidyapeetham Chennai. With my strong foundation in Cloud Computing and Python, I have completed several projects in the field of Cloud Computing. I am currently working on advanced deep learning projects to further enhance my skills. Additionally, as a blogger on Medium, I love sharing my insights and knowledge with others who share my interest in AI and innovation.</p>
-        <div class="box-container">
-            <div class="box">
-              <p><span> E-mail : </span> venkatesh5082931@gmail.com.com</p>
-              <p><span> Native Place : </span>Bobbili, Vijayanagaram , Andhra Pradesh, India - 535558</p>
-              <p><span> Current Place : </span>Jubilee Hills, Hyderabad, Telangana, India - 500033</p>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center bg-gradient-to-br from-gray-900 to-gray-800 p-6">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-indigo-300 text-lg mb-4 hero-text-animate" style="animation-delay: 0.2s;">Hi, I'm Rupesh 👋</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-white mb-6 hero-text-animate" style="animation-delay: 0.4s;">
+                    Frontend Developer & <br class="hidden md:block"> UI/UX Learner
+                </h1>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mt-8">
+                    <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 hero-button-animate" style="animation-delay: 0.6s;">
+                        Download Resume
+                    </a>
+                    <a href="#contact" class="bg-gray-700 hover:bg-gray-600 text-gray-200 font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 hero-button-animate" style="animation-delay: 0.8s;">
+                        Contact Me
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="resumebtn">
-            <a href="https://drive.google.com/file/d/1CGOctjKxnpIIJo7OZnYVnjUnCQr3M_Ea/view?usp=sharing" target="_blank" class="btn"><span>Resume</span>
-                <i class="fas fa-file"></i>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-gray-800 p-6">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-indigo-400 mb-12">About Me</h2>
+                <div class="bg-gray-700 p-8 rounded-xl shadow-xl flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <!-- Placeholder image for Rupesh Naidu -->
+                        <img src="https://placehold.co/150x150/333/FFF?text=Rupesh" alt="Rupesh Naidu" class="rounded-full w-36 h-36 object-cover border-4 border-indigo-500 shadow-lg">
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-semibold text-white mb-4">Rupesh Naidu Maradana</h3>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            I’m Rupesh Naidu Maradana, a Computer Science graduate based in Hyderabad. I have experience in full-stack development, machine learning, and building scalable systems. I’ve contributed to multiple production-level applications, particularly in Flutter, React, and AWS.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            My passion lies in solving real-world problems through innovation and code. I also have a publication in IEEE and certifications from Amazon, IBM, and Great Learning in cloud, ML, and UI/UX.
+                        </p>
+                        <div class="flex items-center space-x-4 text-gray-300">
+                            <i class="fas fa-envelope text-indigo-400"></i>
+                            <span>maradanarupeshnaidu@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-4 text-gray-300 mt-2">
+                            <i class="fas fa-map-marker-alt text-indigo-400"></i>
+                            <span>Hyderabad, Telangana</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-gray-900 p-6">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-indigo-400 mb-12">Projects</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="project-card bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700">
+                        <h3 class="text-2xl font-semibold text-white mb-3">Business Finance Management App</h3>
+                        <p class="text-gray-300 mb-4">
+                            A Flutter-based app to manage business diary and financial activities, supporting hundreds of users with high-speed data operations.
+                        </p>
+                        <p class="text-sm text-gray-400">
+                            <span class="font-medium text-indigo-300">Technologies:</span> Flutter, Dart, Firebase
+                        </p>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700">
+                        <h3 class="text-2xl font-semibold text-white mb-3">Deepfake Detection System</h3>
+                        <p class="text-gray-300 mb-4">
+                            Built a hybrid model using CapsNet and EfficientNet to analyze over 50,000 images, achieving 99.64% accuracy in deepfake detection.
+                        </p>
+                        <p class="text-sm text-gray-400">
+                            <span class="font-medium text-indigo-300">Technologies:</span> Python, PyTorch, OpenCV
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-gray-800 p-6">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-indigo-400 mb-12">Skills</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Each skill card will have the 'skill-card' class for animation -->
+                    <div class="skill-card bg-gray-700 p-5 rounded-lg text-center shadow-md border border-gray-600">
+                        <i class="fab fa-python text-5xl text-blue-400 mb-3"></i>
+                        <p class="text-lg font-medium text-white">Python</p>
+                    </div>
+                    <div class="skill-card bg-gray-700 p-5 rounded-lg text-center shadow-md border border-gray-600">
+                        <i class="fab fa-java text-5xl text-red-400 mb-3"></i>
+                        <p class="text-lg font-medium text-white">Java</p>
+                    </div>
+                    <div class="skill-card bg-gray-700 p-5 rounded-lg text-center shadow-md border border-gray-600">
+                        <i class="fab fa-react text-5xl text-cyan-400 mb-3"></i>
+                        <p class="text-lg font-medium text-white">React</p>
+                    </div>
+                    <div class="skill-card bg-gray-700 p-5 rounded-lg text-center shadow-md border border-gray-600">
+                        <i class="fab fa-flutter text-5xl text-blue-500 mb-3"></i>
+                        <p class="text-lg font-medium text-white">Flutter</p>
+                    </div>
+                    <div class="skill-card bg-gray-700 p-5 rounded-lg text-center shadow-md border border-gray-600">
+                        <i class="fas fa-code text-5xl text-indigo-400 mb-3"></i> <!-- Generic code icon for Dart -->
+                        <p class="text-lg font-medium text-white">Dart</p>
+                    </div>
+                    <div class="skill-card bg-gray-700 p-5 rounded-lg text-center shadow-md border border-gray-600">
+                        <i class="fas fa-brain text-5xl text-green-400 mb-3"></i> <!-- Brain icon for PyTorch -->
+                        <p class="text-lg font-medium text-white">PyTorch</p>
+                    </div>
+                    <div class="skill-card bg-gray-700 p-5 rounded-lg text-center shadow-md border border-gray-600">
+                        <i class="fas fa-database text-5xl text-orange-400 mb-3"></i>
+                        <p class="text-lg font-medium text-white">MySQL</p>
+                    </div>
+                    <div class="skill-card bg-gray-700 p-5 rounded-lg text-center shadow-md border border-gray-600">
+                        <i class="fas fa-database text-5xl text-purple-400 mb-3"></i>
+                        <p class="text-lg font-medium text-white">PostgreSQL</p>
+                    </div>
+                    <div class="skill-card bg-gray-700 p-5 rounded-lg text-center shadow-md border border-gray-600">
+                        <i class="fab fa-git-alt text-5xl text-red-500 mb-3"></i>
+                        <p class="text-lg font-medium text-white">Git</p>
+                    </div>
+                    <div class="skill-card bg-gray-700 p-5 rounded-lg text-center shadow-md border border-gray-600">
+                        <i class="fab fa-figma text-5xl text-pink-400 mb-3"></i>
+                        <p class="text-lg font-medium text-white">Figma</p>
+                    </div>
+                    <div class="skill-card bg-gray-700 p-5 rounded-lg text-center shadow-md border border-gray-600">
+                        <i class="fab fa-aws text-5xl text-yellow-400 mb-3"></i>
+                        <p class="text-lg font-medium text-white">AWS</p>
+                    </div>
+                    <div class="skill-card bg-gray-700 p-5 rounded-lg text-center shadow-md border border-gray-600">
+                        <i class="fab fa-docker text-5xl text-sky-400 mb-3"></i>
+                        <p class="text-lg font-medium text-white">Docker</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-900 p-6">
+            <div class="container mx-auto max-w-2xl text-center">
+                <h2 class="text-4xl font-bold text-indigo-400 mb-12">Contact Me</h2>
+                <p class="text-gray-300 text-lg mb-8">
+                    Feel free to reach out if you have any questions, opportunities, or just want to connect!
+                </p>
+                <div class="flex flex-col items-center space-y-6">
+                    <a href="mailto:maradanarupeshnaidu@gmail.com" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 flex items-center space-x-3">
+                        <i class="fas fa-envelope"></i>
+                        <span>maradanarupeshnaidu@gmail.com</span>
+                    </a>
+                    <div class="flex space-x-6 text-gray-300 text-3xl">
+                        <a href="https://github.com/your-github" target="_blank" class="hover:text-indigo-400 transition duration-300" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/your-linkedin" target="_blank" class="hover:text-indigo-400 transition duration-300" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:maradanarupeshnaidu@gmail.com" class="hover:text-indigo-400 transition duration-300" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 Rupesh Naidu. All Rights Reserved.</p>
+        <div class="flex justify-center space-x-4 mt-4 text-xl">
+            <a href="https://github.com/your-github" target="_blank" class="hover:text-indigo-400 transition duration-300" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/your-linkedin" target="_blank" class="hover:text-indigo-400 transition duration-300" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:maradanarupeshnaidu@gmail.com" class="hover:text-indigo-400 transition duration-300" aria-label="Email">
+                <i class="fas fa-envelope"></i>
             </a>
         </div>
-    </div>
-    </div>
-</section>
-<!-- about section ends -->
-
-
-
-<!-- education section starts -->
-<section class="education" id="education">
-  <h1 class="heading"><i class="fas fa-graduation-cap"></i><span>Education</span></h1>
-  <div class="box-container">
-
-    <div class="box"><div class="image"><img src="./assets/images/educat/Landing.png" alt=""></div><div class="content">
-    <h3>B.Tech | Computer Science</h3><a href="https://www.nagarjunauniversity.ac.in/"><p>Acharya Nagarjuna University Institute of Technology, GUNTUR</p></a>
-    <h4>2020-2024</h4><p>Grade: 7.8 GPA (upto 7th Semester)</p></div></div>
-
-    <div class="box"><div class="image"><img src="./assets/images/educat/college.jpg" alt=""></div><div class="content">
-    <h3>Intermediate |  M.P.C</h3><p>(N120),Narayana Junior College, VIshakapatnam</p>
-    <h4>2018-2020</h4><p>Grade: 9.34 GPA</p></div></div>
-    
-    <div class="box"><div class="image"><img src="./assets/images/educat/school.png" alt=""></div><div class="content">
-    <h3>Class X</h3><p>Narayana Olympiad School, Vishakapatnam</p>
-    <h4>2017-2018</h4><p>Marks: 391 (CBSE)</p></div></div>
-
-  </div>
-</section>
-<!-- education section ends -->
-
-
-
-<!-- PROJECT SECTION STARTS -->
-<section class="work", id="projects">
-  <div class="container">
-    <div class="heading">
-      <h2><span>Projects</span></h2>
-    </div>
-    <div class="box-container">
-
-      <!--Project-1-->
-      <div class="box"><a href="https://github.com/crazyvenky/">
-      <img src=".\assets\images\projects\hand_opencv.png"alt="Mediapipe"></a><div class="content"><div class="tag">
-      <h3>Hand Tracking With Mediapipe</h3></div></div></div>
-
-
-      <!--Project-2-->
-      <div class="box"><a href="https://github.com/crazyvenky/">
-      <img src=".\assets\images\projects\langchain.png"alt="Langchain Chatbot"></a><div class="content"><div class="tag">
-      <h3>Langchain Conversational Chatbot</h3></div></div></div>
-
-
-      <!--Project-3-->
-      <div class="box"><a href="https://github.com/crazyvenky/">
-      <img src=".\assets\images\projects\virat.jpg"alt="Power BI"></a><div class="content"><div class="tag">
-      <h3>Virat Kohli Perfomance Analysis</h3></div></div></div>
-
-
-      <!--Project-4-->
-      <div class="box"><a href="https://github.com/crazyvenky/">
-      <img src=".\assets\images\projects\diamond.jpg"alt="Image Scraping"></a><div class="content"><div class="tag">
-      <h3>End-to-End Diamond Price Prediction</h3></div></div></div>
-
-
-      <!--Project-5-->
-      <div class="box"><a href="https://github.com/crazyvenky/">
-      <img src=".\assets\images\projects\image_scraper.png"alt="Image Scraping"></a><div class="content"><div class="tag">
-      <h3>End-to-End-Image-Scraping</h3></div></div></div>
-
-
-      <!--Project-6-->
-      <div class="box"><a href="https://github.com/crazyvenky/">
-      <img src=".\assets\images\projects\ocr.png" alt="Optical Character Recognition"></a><div class="content"><div class="tag">
-      <h3>Optical Character Recognition</h3></div></div></div>
-
-
-      <!--Project-7-->
-      <div class="box"><a href="https://github.com/crazyvenky/">
-      <img src=".\assets\images\projects\docgenius.png" alt="DocGenius"></a><div class="content"><div class="tag">
-      <h3>DocGenius</h3></div></div></div>
-      
-
-      <!--Project-8-->
-      <div class="box"><a href="https://github.com/crazyvenky/">
-      <img src=".\assets\images\projects\dalle.jpg" alt="Dall.E"></a><div class="content"><div class="tag">
-      <h3>DALL.E</h3></div></div></div>
-
-      
-      <!--Project-9-->
-      <div class="box"><a href="https://github.com/crazyvenky/">
-      <img src=".\assets\images\projects\airbnb.jpg" alt="Airbnb"></a><div class="content"><div class="tag">
-      <h3>Airbnb Price Prediction</h3></div></div></div>
-
-    </div>
-    <div class="viewall">
-      <a href="https://github.com/crazyvenky/" class="btn"><span>View More Projects</span><i class="fas fa-chevron-right"></i></a>
-    </div>
-  </div>
-</section>
-<!-- work project section ends -->
-
-
-
-<!-- experience section starts -->
-<section class="experience" id="experience">
-  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
-  <div class="timeline">
-
-    <div class="container left"><div class="content"><div class="tag"><h2>HippoCloud</h2></div><div class="desc">
-    <h3>Artificial Intelligence / Machine Learning Internship</h3><p>June 2023 - Nov 2023</p><br>
-    <p>As a Team Leader, I've had the privilege of leading a team of 7 members in the development of cutting-edge projects. As a team, we take immense pride in our work and actively contribute to the open-source community. One of our major endeavors includes creating an automated machine learning library similar to Pycaret and Gluon. We are currently focused on publishing the library on PyPI, a software repository of python, ensuring its accessibility to the broader AI and ML community.
-    <br><br><b>Skills</b>:  Python (Programming Language) · Machine Learning · Object-Oriented Programming (OOP) · NumPy · SQLite · Pandas</p></div></div></div>
-
-    <div class="container right"><div class="content"><div class="tag"><h2>INeuron</h2></div><div class="desc">
-    <h3>Full Stack Data Science Internship</h3><p>April 2023 - Present</p><br>
-    <p>As a data science intern at Ineuron, I am gaining hands-on experience in the latest data science and machine learning techniques under the guidance of experienced mentors. I am currently working on projects that involve developing and implementing Advanced Deep learning algorithms, computer vision and natural language processing techniques. In this role, I have the opportunity to apply my knowledge of Python programming and popular libraries such as NumPy, Pandas, Matplotlib, Seaborn, Scikit-Learn, OpenCV, TensorFlow, Keras, and PyTorch. I am thrilled to be part of such a respected organization in the field, and I look forward to further developing my skills and contributing to the exciting projects at Ineuron.
-    <br><br><b>Skills</b>: Python (Programming Language) · Data Science · Machine Learning · Flask · Web Scraping · Version Control · Deep Learning · Object-Oriented Programming (OOP) · Statistics</p></div></div></div>
-
-    <div class="container left"><div class="content"><div class="tag"><h2>Medium</h2></div><div class="desc">
-    <h3>Data Science Content Creator</h3><p>Jan 2023 - Present</p><br>
-    <p>As a Technical Blogger at Medium, I possess expertise in writing high-quality articles on complex topics such as Machine Learning, Deep Learning, Natural Language Processing, Computer Vision, Data Science
-    <br><br><b>Skills</b>: • Communication · Technical Writing · Analytical Skills · Research · Time Management · Creative Writing</p></div></div></div>
-
-    <div class="container right"><div class="content"><div class="tag"><h2>CodeClause</h2></div><div class="desc">
-    <h3>Data Science Internship</h3><p>June 2023 - July 2023</p><br>
-    <p>During my Data Science internship, I gained hands-on experience analyzing data, building ML models, and using tools like Python, SQL, Scikit-Learn, and TensorFlow. My internship has equipped me with a strong foundation in Data Science and Business Analytics, making me a valuable asset to any team.
-    <br><br><b>Skills</b>: • Statistics · Data Science · Machine Learning · Deep Learning · Analytical Skills</p></div></div></div>
-
-    <div class="container left"><div class="content"><div class="tag"><h2>Oasis Infobyte</h2></div><div class="desc">
-    <h3>Data Science Internship</h3><p>May 2023 - June 2023</p><br>
-    <p>During my internship at Oasis Infobyte, I had the opportunity to gain hands-on experience in the field of Data Science and Machine Learning. I worked on various topics such as Supervised Learning, Clustering Algorithms, and Data Visualisation. Throughout my internship, I utilized Python programming and popular libraries such as Scikit-learn, TensorFlow, and Pandas for data analysis, modeling, and visualization.
-    <br><br><b>Skills</b>: Python (Programming Language) · Supervised Learning · Classification · Statistical Data Analysis · Analytical Skills · Data Cleaning · Data Visualization</p></div></div></div>
-          
-  </div><br>
-  <div class="morebtn">
-    <a href="" class="btn"><span>MORE TO DO</span>
-      <i class="fas fa-arrow-right"></i>
-  </a>
-  </div>
-</div>
-</section>
-
-
-
-<!-- BLOGS SECTION STARTS -->
-<section class="work", id="blogs">
-  <div class="container">
-    <div class="heading">
-      <h2>Articles <span>&</span> Blogs</h2>
-    </div>
-    <div class="box-container">
-
-      <!--Blog-1-->
-      <div class="box"><a href="https://medium.com/@kalyanmurapaka274/list/statistics-for-machine-learning-280d8c8be0d5">
-      <img src=".\assets\images\Blogs\statistics.png" alt="Statistics">
-      </a><div class="content"><div class="tag"><h3> Statistics for Machine Learning </h3></div></div></div>
-
-
-      <!--Blog-2-->
-      <div class="box"><a href="https://medium.com/@kalyanmurapaka274/list/python-programming-language-complete-playlist-f03ccf59f56e">
-      <img src=".\assets\images\Blogs\python.jpg" alt="Python">
-      </a><div class="content"><div class="tag"><h3> Python - Complete Playlist</h3></div></div></div>
-
-      
-      <!--Blog-3-->
-      <div class="box"><a href="https://medium.com/@kalyanmurapaka274/list/flask-for-machine-learning-7f0ada3e48dd">
-      <img src=".\assets\images\Blogs\flask.png" alt="Flask">
-      </a><div class="content"><div class="tag"><h3> Flask for Machine Learning</h3></div></div></div>
-
-
-      <!--Blog-4-->
-      <div class="box"><a href="https://medium.com/@kalyanmurapaka274/life-cycle-of-machine-learning-791f8df278d">
-      <img src=".\assets\images\Blogs\ml phases.jpg" alt="Life Cycle of Machine Learning">
-      </a><div class="content"><div class="tag"><h3>Life Cycle of Machine Learning</h3></div></div></div>
-
-
-      <!--Blog-5-->
-      <div class="box"><a href="https://medium.com/@kalyanmurapaka274/what-is-feature-engineering-ea34ad520618">
-      <img src=".\assets\images\Blogs\feature.png" alt="Feature Engineering?">
-      </a><div class="content"><div class="tag"><h3>What is Feature Engineering?</h3></div></div></div>
-
-
-      <!--Blog-6-->
-      <div class="box"><a href="https://medium.com/@kalyanmurapaka274/k-nearest-neighbors-complete-guide-5045d90f43dd">
-      <img src=".\assets\images\Blogs\knn.jpg" alt="K Nearest Neighbors">
-      </a><div class="content"><div class="tag"><h3>K Nearest Neighbors-Complete Guide</h3></div></div></div>
-
-
-      <!--Blog-7-->
-      <div class="box"><a href="https://medium.com/@kalyanmurapaka274/spam-e-mail-classification-using-machine-learning-caf5653e58e1">
-      <img src=".\assets\images\Blogs\spam.png" alt="Spam E-mail"></a>
-      <div class="content"><div class="tag"><h3>Spam Email Classification Explained</h3></div></div></div>
-      
-
-      <!--Blog-8-->
-      <div class="box"><a href="https://medium.com/@kalyanmurapaka274/mojo-superset-of-python-e032884c6b93">
-      <img src=".\assets\images\Blogs\mojo.png" alt="Mojo">
-      </a><div class="content"><div class="tag"><h3>Mojo - Superset of Python</h3></div></div></div>
-
-    </div>
-    <div class="viewall">
-      <a href="https://medium.com/@kalyanmurapaka274" class="btn"><span>View More Blogs</span><i class="fas fa-chevron-right"></i></a>
-    </div>
-  </div>
-</section>
-<!-- work project section ends -->
-
-
-
-<!-- Skills Section Starts -->
-<section class="skills" id="skills">
-  <div class="container">
-    <div class="heading">
-      <h2>Abilities <span>&</span> Skills</h2><br>
-    </div>
-    <div class="row">
-
-      <!-- Data Science and Machine Learning -->
-      <div class="bar"><div class="info"><span>Artificial Intelligence</span></div></div>
-      <div class="bar"><div class="info"><span>Machine Learning</span></div></div>
-      <div class="bar"><div class="info"><span>Data Science</span></div></div>
-      <div class="bar"><div class="info"><span>Deep Learning</span></div></div>
-      <div class="bar"><div class="info"><span>Computer Vision</span></div></div>
-      <div class="bar"><div class="info"><span>Generative AI</span></div></div>
-      <div class="bar"><div class="info"><span>Natural Language Processing</span></div></div>
-      <div class="bar"><div class="info"><span>Large Language Models</span></div></div>
-
-      <!-- Programming and Development -->
-      <div class="bar"><div class="info"><span>Python</span></div></div>
-      <div class="bar"><div class="info"><span>Web Scraping</span></div></div>
-      <div class="bar"><div class="info"><span>OOP's Concepts</span></div></div>
-      <div class="bar"><div class="info"><span>Amazon Web Services</span></div></div>
-
-      <!-- Data Analysis and Visualization and Python Libraries -->
-      <div class="bar"><div class="info"><span>Exploratory Data Analysis</span></div></div>
-      <div class="bar"><div class="info"><span>Numpy</span></div></div>
-      <div class="bar"><div class="info"><span>Pandas</span></div></div>
-      <div class="bar"><div class="info"><span>Matplotlib</span></div></div>
-      <div class="bar"><div class="info"><span>Seaborn</span></div></div>
-      <div class="bar"><div class="info"><span>Scikit-Learn</span></div></div>
-      <div class="bar"><div class="info"><span>OpenAI</span></div></div>
-
-      <!-- Web Development and Deployment -->
-      <div class="bar"><div class="info"><span>Flask</span></div></div>
-      <div class="bar"><div class="info"><span>OpenCV</span></div></div>
-      <div class="bar"><div class="info"><span>Data Version Control</span></div></div>
-      <div class="bar"><div class="info"><span>Langchain</span></div></div>
-      <div class="bar"><div class="info"><span>Hugging Face</span></div></div>
-      <div class="bar"><div class="info"><span>Tensorflow</span></div></div>
-
-      <!-- Database and Cloud Services -->
-      <div class="bar"><div class="info"><span>Statistics Analysis</span></div></div>
-      <div class="bar"><div class="info"><span>Data Visualisation</span></div></div>
-      <div class="bar"><div class="info"><span>SQL</span></div></div>
-      <div class="bar"><div class="info"><span>MongoDB</span></div></div>
-
-      <!-- Deployment and Visualization Tools -->
-      <div class="bar"><div class="info"><span>Streamlit</span></div></div>
-      <div class="bar"><div class="info"><span>Docker</span></div></div>
-      <div class="bar"><div class="info"><span>Netlify</span></div></div>
-      <div class="bar"><div class="info"><span>Heroku</span></div></div>
-
-      <!-- Version Control and BI Tools -->
-      <div class="bar"><div class="info"><span>Git & GitHub</span></div></div>
-      <div class="bar"><div class="info"><span>Microsoft Power BI</span></div></div>
-      <div class="bar"><div class="info"><span>Tableau</span></div></div>
-
-    </div>
-  </div>
-</section>
-<!-- skills section ends -->
-
-
-
-<!-- footer section starts -->
-<section class="footer">
-
-  <div class="box-container">
-
-      <div class="box">
-          <h3>Venky's Portfolio</h3>
-          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀<br><br> <a href="https://www.instagram.com/pvenkatasivakumar/">CONTACT ME</a> </p>
-      </div>
-
-      <div class="box">
-          <h3>quick links</h3>
-          <a class="active" href="#home">Home</a>
-          <a href="#education">Education</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#blogs">Articles & Blogs</a>
-          <a href="#skills">Skills</a>
-      </div>
-      
-      <div class="box">
-          <h3>contact info</h3>
-          <p> <i class="fas fa-phone"></i>+91 9666996***</p>
-          <p> <i class="fas fa-envelope"></i>rupeshnaidumaradana@gmail.com</p>
-          <p> <i class="fas fa-map-marked-alt"></i>Andhra Pradesh, India(Native)</p>
-          <p> <i class="fas fa-map-marked-alt"></i>Hyderabad,Andhra Pradesh, India(current)</p>
-          <div class="share">
-            <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/rupesh-naidu-maradana-60576521a/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
-            <li><a class="github" aria-label="GitHub" href= "https://github.com/RUPESHNAIDUMARADANA" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com//"><i class="fab fa-instagram" target="_blank"></i></a></li>
-            <li><a class="twitter" aria-label="Twitter" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a class="dev" aria-label="Medium" href="https://medium.com/" target="_blank"><i class="fab fa-medium-m"></i></a></li>
-          </div>
-      </div>
-  </div>
-</section>
-<!-- footer section ends -->
-
-
-
-<!-- scroll top btn -->
-<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-<!-- scroll back to top -->
-
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-<!-- jquery cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- typed.js cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- particle.js links -->
-<script src="./assets/js/particles.min.js"></script>
-<script src="./assets/js/app.js"></script>
-
-<!-- vanilla tilt.js links -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- scroll reveal anim -->
-<script src="https://unpkg.com/scrollreveal"></script>
-
-<script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-<script src="./assets/js/script.js"></script>
-
+    </footer>
+
+    <script>
+        // JavaScript for skills section animations on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const skillCards = document.querySelectorAll('.skill-card');
+
+            // Intersection Observer to trigger animations when elements enter viewport
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, { threshold: 0.2 }); // Trigger when 20% of the element is visible
+
+            skillCards.forEach(card => {
+                observer.observe(card);
+            });
+
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
