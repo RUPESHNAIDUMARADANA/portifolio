@@ -1,3 +1,3 @@
-# portifolio
+# portfolio
 
-https://rupeshnaidumaradana.github.io/portifolio/
+https://rupeshnaidumaradana.github.io/portfolio/
